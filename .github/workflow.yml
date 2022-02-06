@@ -1,0 +1,18 @@
+name: build-page
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Dependencies 
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+        run: |
+          npm install
+          npm run build
+      - name: Archive Build
+        uses: actions/upload-artifact@v2
+        with:
+          name: built-page
+          path: public

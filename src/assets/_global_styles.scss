@@ -1,0 +1,23 @@
+@use "./vars";
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    background-color: vars.$background;
+    color: vars.$text-color--primary;
+
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+}
+
+li, ul {
+    list-style: none;
+}

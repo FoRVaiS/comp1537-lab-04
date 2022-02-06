@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "build:html": "pug -o ./public ./src/index.pug --pretty",
+    "build:css": "sass --no-source-map ./src/assets/index.scss:./public/assets/styles.css",
+    "build": "concurrently \"npm run build:html\" \"npm run build:css\"",
+    "start": "concurrently \"pug -o ./public ./src/index.pug --watch --pretty \" \"sass --no-source-map ./src/assets/index.scss:./public/assets/styles.css --watch \""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.49.7"
+  }
+}

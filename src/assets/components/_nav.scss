@@ -1,0 +1,35 @@
+@use "../vars";
+
+.nav {
+    overflow: hidden;
+
+    &--primary {
+        background-color: vars.$background--nav--primary;
+    }
+    
+    &__link {
+        &, &--end {
+            display: block;
+            padding: 14px 16px;
+            
+            color: vars.$text-color--nav__anchor;
+        }
+
+        @media screen and (min-width: 300px) {        
+            & {
+                float: left;
+            }
+    
+            &--end {
+                float: right;
+            }
+        }
+        
+        @media screen and (max-width: 300px) {        
+            &, &--end {
+                float: none;
+            }
+        }
+
+    }
+}

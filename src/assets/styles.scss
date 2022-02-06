@@ -1,0 +1,44 @@
+@use "./vars";
+
+.container {
+    margin: 0 vars.$gutter;
+
+    height: 100vh;
+
+    &--left {
+        float: left;
+    }
+
+    &--right {
+        float: right;
+    }
+    
+    &--fill {
+        clear: both;
+    }
+    
+    @media screen and (min-width: 600px) {
+        &--left {
+            width: 75%;
+        }
+        
+        &--right {
+            width: 25%;
+
+            padding-left: 10px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        &--left, &--right {
+            width: 100%;
+
+            padding-left: 0px;
+        }
+    }
+}
+
+#footer {
+    text-align: center;
+    padding: 1rem 0;
+}
